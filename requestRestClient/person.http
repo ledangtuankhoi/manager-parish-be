@@ -1,0 +1,148 @@
+### delete all
+DELETE http://localhost:5000/api/person/delete-all
+
+### create one
+POST http://localhost:5000/api/person
+Content-Type: application/json
+
+{
+        "position": "chiefPriest",
+        "givenName": "givenName le ha" ,
+        "firstName": "firstName tuankhoi2" ,
+        "holyName" : "6238b9645d92d6c556d110e6", 
+        "sex":  "male",
+        "dateOfBirth": "11/11/2020 00:00:00", 
+        "identityCard": "identityCard", 
+        "eduLevel": "12/12", 
+        "isEdu": true , 
+        "qualification": "qualification", 
+        "foreignLanguage": "foreignLanguage", 
+        "job": "job tuankhoi", 
+        "ethnic": "ethnic", 
+        "numberPhone": "{{$randomInt 1 1000}}", 
+        "email": "{{$randomInt 1 1000}}",
+        "address": "{{$randomInt 1 1000}}",
+        "note": "{{$randomInt 1 1000}}", 
+        "mon": "6236d1db5e961154258bcba1" ,
+        "dad": "6236d1db5e961154258bcba1",
+        "subParish":  "6236d1db5e961154258bcba1", 
+        "parish": "6236d1db5e961154258bcba1",  
+
+        "baptism_date": "03/20/2022",
+        "baptism_location": "baptism_location",
+        "baptism_priest": "baptism_priest",
+        "baptism_patron": "6236d1db5e961154258bcba1", 
+
+        "confirmation_date": "03/20/2022",
+        "confirmation_location": "confirmation_location",
+        "confirmation_priest": "confirmation_priest",
+        "confirmation_patron": "6236d1db5e961154258bcba1",
+
+        "eucharist_date": "03/20/2022",
+        "eucharist_location": "eucharist_location",
+        "eucharist_priest": "eucharist_priest",
+        "eucharist_patron": "6236d1db5e961154258bcba1",
+
+        "holyOrder_date": "03/20/2022",
+        "holyOrder_location": "holyOrder_location",
+        "holyOrder_priest": "holyOrder_priest",
+        "holyOrder_patron": "6236d1db5e961154258bcba1",
+   
+        "family": "6236d1db5e961154258bcba1"
+}
+
+### update one
+POST http://localhost:5000/api/person/623884d3545048eafaa6d447?_method=PUT
+Content-Type: application/json
+
+{
+        "position": "chiefPriest",
+        "givenName": "tuankhoi" ,
+        "firstName": "hai nguyen" ,
+        "holyName" : "6238411f76e8c3c125758325", 
+        "sex":  "male",
+        "dateOfBirth": "11/11/2020 00:00:00", 
+        "identityCard": "identityCard", 
+        "eduLevel": "12/12", 
+        "isEdu": true , 
+        "qualification": "qualification", 
+        "foreignLanguage": "foreignLanguage", 
+        "job": "le ha", 
+        "ethnic": "ethnic", 
+        "numberPhone": "numberPhone", 
+        "email": "email",
+        "address": "address",
+        "note": "note", 
+        "mon": "6236d1db5e961154258bcba1" ,
+        "dad": "6236d1db5e961154258bcba1",
+        "subParish":  "6236d1db5e961154258bcba1", 
+        "parish": "6236d1db5e961154258bcba1",  
+
+        "baptism_date": "03/20/2022",
+        "baptism_location": "baptism_location",
+        "baptism_priest": "baptism_priest",
+        "baptism_patron": "6236d1db5e961154258bcba1", 
+
+        "confirmation_date": "03/20/2022",
+        "confirmation_location": "confirmation_location",
+        "confirmation_priest": "confirmation_priest",
+        "confirmation_patron": "6236d1db5e961154258bcba1",
+
+        "eucharist_date": "03/20/2022",
+        "eucharist_location": "eucharist_location",
+        "eucharist_priest": "eucharist_priest",
+        "eucharist_patron": "6236d1db5e961154258bcba1",
+
+        "holyOrder_date": "03/20/2022",
+        "holyOrder_location": "holyOrder_location",
+        "holyOrder_priest": "holyOrder_priest",
+        "holyOrder_patron": "6236d1db5e961154258bcba1",
+   
+        "family": "6236d1db5e961154258bcba1"
+}
+ 
+
+### delete one
+POST http://localhost:5000/api/person/6237e52139d4e6a024038e26?_method=DELETE
+
+
+
+
+### search simple
+GET http://localhost:5000/api/person/search-simple?position=chiefPriest&eduLevel=12/12&name="nul"
+
+
+### text search mongodb
+# GET http://localhost:5000/api/person/text-search?job=tuankhoi&position=chiefPriest&name_givenName=null
+GET http://localhost:5000/api/person/search-quick?q=hai
+
+
+
+### get one
+GET http://localhost:5000/api/person/6238b9735d92d6c556d110ea
+
+
+### get all
+# request query 
+        # typeSort kiểu sắp xếp asc/desc (default 'asc')
+        # columnSort cột cần sắp xết (default 'updatedAt')
+        # limitPage giới hạn dữ liệu trả về (default '3')
+        # skipPage trang  tiếp theo 
+        # seletedField 
+GET http://localhost:5000/api/person/   
+
+### detele multiple
+POST http://localhost:5000/api/person/delete-multiple?_method=delete
+Content-Type: application/json
+
+{
+        "ids":[ 
+                "62399c660a2eb6b42a941348",
+                "62399c660a2eb6b42a94134a",
+                "62399c660a2eb6b42a94134c",
+                "62399c660a2eb6b42a94134e",
+                "62399c660a2eb6b42a941350",
+                "62399c660a2eb6b42a941352",
+                "62399c660a2eb6b42a941354"
+        ]
+}

@@ -8,7 +8,7 @@ import morgan from "morgan";
 import methodOverride from 'method-override';
 import path from 'path';
 import {fileURLToPath} from 'url';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 connectDb();

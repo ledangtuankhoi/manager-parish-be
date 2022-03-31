@@ -1,0 +1,18 @@
+###
+DELETE http://localhost:5000/api/holy-name/delete-all
+
+###
+POST http://localhost:5000/api/holy-name
+Content-Type: application/json
+
+{ 
+    "name": "req.holyname.name",
+    "saintsDay": "01/01/0001",
+    "description": "req.description"
+}
+ 
+
+ 
+###
+GET http://localhost:5000/api/holy-name/6238b9645d92d6c556d110e6 
+ 

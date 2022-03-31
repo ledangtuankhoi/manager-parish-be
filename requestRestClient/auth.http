@@ -1,0 +1,44 @@
+@baseURL = https://manager-parish-be.herokuapp.com/api
+
+
+###
+GET {{baseURL}}
+
+
+
+### delete all database User
+DELETE  {{baseURL}}auth/delete-all
+
+
+### verify token
+GET {{baseURL}}auth/test-token
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjQ3ODU0NjkzLCJleHAiOjE2NDc4NTQ3MDN9.BgWdLx-MC1Cv2thSVGH-T9nnQSAgAO9C2MVrB9t4gMU
+
+
+### login
+POST {{baseURL}}login
+Content-Type: application/json 
+
+{
+    "username": "tuankhoi2",
+    "password": "1234"
+}
+
+### register
+POST {{baseURL}}register
+Content-Type: application/json
+
+{
+    "username": "tuankhoi2 s df",
+    "password": "1234"
+}
+
+
+
+### UPdate refresh token
+POST  {{baseURL}}auth/token
+Content-Type: application/json
+
+{
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjQ3ODY5ODc1LCJleHAiOjE2NDc4Njk5MzV9._LrWMz2foSZogAFVwunPyo4jrB7eL5tr5JMY7P5qrpc"
+}
