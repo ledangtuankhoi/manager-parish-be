@@ -1,4 +1,4 @@
-import HolyName from "../../models/HolyName.js";
+import HolyName from "../../models/holy_name.js";
 
 export function delete_all(req, res, next) {
   HolyName.deleteMany({})

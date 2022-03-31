@@ -1,5 +1,5 @@
 import Person from "../../models/person.js";
-import HolyName from "../../models/holyName.js";
+import HolyName from "../../models/holy_name.js";
 import rexQueryReq from '../../utils/rexQueryReq.js'
 
 //func test
