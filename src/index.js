@@ -8,7 +8,7 @@ import morgan from "morgan";
 import methodOverride from 'method-override';
 import path from 'path';
 import {fileURLToPath} from 'url';
-import cors from 'Cors'
+import cors from 'cors'
 const PORT = process.env.PORT || 3000;
 
 

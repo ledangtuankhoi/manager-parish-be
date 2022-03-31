@@ -6,11 +6,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	  "start":"node src/index.js"
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": { 
+  "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
@@ -26,5 +26,5 @@
   },
   "engines": {
     "node": "16.13.1"
-    }
+  }
 }
