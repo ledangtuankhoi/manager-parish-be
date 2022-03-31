@@ -8,11 +8,14 @@ import morgan from "morgan";
 import methodOverride from 'method-override';
 import path from 'path';
 import {fileURLToPath} from 'url';
+import cors from 'Cors'
 const PORT = process.env.PORT || 3000;
 
 
 connectDb();
 const app = express();
+
+app.use(cors())
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'))
